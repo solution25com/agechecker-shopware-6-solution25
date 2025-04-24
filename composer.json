@@ -1,0 +1,27 @@
+{
+    "name": "s25/age-checker",
+    "description": "age-checker/age-checker",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "AgeChecker\\AgeChecker",
+        "label": {
+            "de-DE": "Age Checker",
+            "en-GB": "Age Checker"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AgeChecker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AgeChecker\\Tests\\": "tests/"
+        }
+    }
+}

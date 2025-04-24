@@ -1,0 +1,16 @@
+{% sw_extends '@Storefront/storefront/page/checkout/confirm/index.html.twig' %}
+{% block page_checkout_summary_list %}
+    {{ parent() }}
+    {% set selectedCustomerGroups = config('AgeChecker.config.customerGroups') %}
+    {% set customerGroupId = context.currentCustomerGroup.id %}
+    {% set isInCustomerGroupConfig = (customerGroupId in selectedCustomerGroups) %}
+    {% if not isInCustomerGroupConfig %}
+        <template age-checker-plugin
+                  apiKey="{{ page.extensions.apiKey.apiKey }}"
+                  userAgeIsConfirmed="{{ context.customer.customFields.custom_age_confirmed_ }}"
+                  currentCustomer="{{ context.customer|json_encode }}"
+                  updateStatusEndpoint="/age-checker-user-status"
+                  temporaryDeniedUri="/temporary-denied"
+        ></template>
+    {% endif %}
+{% endblock %}
