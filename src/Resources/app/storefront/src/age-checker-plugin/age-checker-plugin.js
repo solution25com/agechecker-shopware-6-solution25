@@ -1,4 +1,4 @@
-import Plugin from 'src/plugin-system/plugin.class';
+const Plugin = window.PluginBaseClass;
 
 export default class AgeCheckerPlugin extends Plugin {
     async init() {
@@ -51,19 +51,15 @@ export default class AgeCheckerPlugin extends Plugin {
     }
 
     async setVerified(url, data) {
-        try {
-            const res = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            });
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
 
-            if (!res.ok) throw new Error('Network response was not ok');
+        if (!res.ok) throw new Error('Network response was not ok');
 
-            return await res.json();
-        } catch (error) {
-            throw error;
-        }
+        return await res.json();
     }
 
     startAgeVerification(customer, data) {
@@ -99,7 +95,7 @@ export default class AgeCheckerPlugin extends Plugin {
     getAgeCheckerConfig(apiKey, verificationData) {
         return {
             bind_form_submit: true,
-            element: '#confirmFormSubmit, .nmiConfirmFormSubmit',
+            element: '#confirmFormSubmit',
             key: this.apiKey,
             show_close: true,
             onstatuschanged: this.onStatusChanged.bind(this),
@@ -170,7 +166,7 @@ export default class AgeCheckerPlugin extends Plugin {
             a.src="https://cdn.agechecker.net/static/popup/v1/popup.js";
             a.crossOrigin="anonymous";
 
-            a.onerror=function(a){
+            a.onerror=function(){
                 w.location.href="https://agechecker.net/loaderror";
             };
 

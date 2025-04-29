@@ -28,7 +28,7 @@ class AgeCheckerClient
             $response = $this->client->request('GET', "{$this->baseUrl}{$endpoint}{$uuid}");
             return json_decode($response->getBody()->getContents());
         } catch (GuzzleException $e) {
-            $this->logger->error(dump($e));
+            $this->logger->error($e->getMessage());
         }
     }
 }
