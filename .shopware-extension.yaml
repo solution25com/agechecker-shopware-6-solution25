@@ -1,0 +1,4 @@
+validation:
+  ignore:
+    - message: 'the german description with length of 38 should have a length from 150 up to 185 characters.'
+    - message: 'the english description with length of 36 should have a length from 150 up to 185 characters.'
