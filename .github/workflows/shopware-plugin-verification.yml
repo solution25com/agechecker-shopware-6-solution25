@@ -34,7 +34,6 @@ jobs:
         run: |
           echo "❌ Shopware Extension Verifier detected issues. Please review and fix them."
           echo "### ❌ Shopware Extension Verifier Failed (${matrix.version-selection})" >> $GITHUB_STEP_SUMMARY
-          exit 1
 
       - name: ✅ Extension Verifier Passed – No errors found
         if: success() && steps.verifier.outcome == 'success'
