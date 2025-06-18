@@ -7,6 +7,7 @@ The AgeChecker plugin helps merchants enforce age verification on their Shopware
 This tool is especially useful for businesses selling age-restricted products, providing a configurable and user-friendly verification layer that integrates seamlessly with Shopware's sales channels.
  
 ### Key Features
+
  
 1. **Sales Channel Integration**
    - Add API keys per sales channel for flexible configuration.
