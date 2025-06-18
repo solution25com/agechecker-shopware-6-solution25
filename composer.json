@@ -16,25 +16,6 @@
         "shopware/storefront": "^6.6"
 
     },
-    "extra": {
-        "shopware-plugin-class": "AgeChecker\\AgeChecker",
-        "label": {
-            "de-DE": "Altersüberprüfung",
-            "en-GB": "Age Checker"
-        },
-        "description": {
-            "de-DE": "Altersüberprüfungs-Plugin für Shopware",
-            "en-GB": "Age verification plugin for Shopware"
-        },
-        "manufacturerLink": {
-            "de-DE": "https://solution25.com/",
-            "en-GB": "https://solution25.com/en/home_en/"
-        },
-        "supportLink": {
-            "de-DE": "https://solution25.com/",
-            "en-GB": "https://solution25.com/en/home_en/"
-        }
-    },
     "autoload": {
         "psr-4": {
             "AgeChecker\\": "src/"
