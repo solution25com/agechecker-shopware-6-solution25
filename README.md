@@ -95,6 +95,64 @@ git clone https://github.com/solution25com/agechecker-shopware-6-solution25.git
 - Denied users are blocked for 24 hours before they can try again.
  
 ---
+
+# Age Checker Plugin - API Documentation
+ 
+This document describes the API endpoint for the Age Checker Plugin for Shopware 6. The plugin integrates with AgeChecker.net to verify a customer’s age and stores the result in the customer’s custom fields.
+ 
+---
+ 
+## Update Customer Age Verification Status
+ 
+**Endpoint**  
+`POST /age-checker-user-status`
+ 
+### Description
+ 
+Updates the `custom_age_confirmed_` custom field for a logged-in customer based on the age verification result received from the AgeChecker.net service.
+ 
+### System Checks
+ 
+- Customer must be logged in.
+- The `uuid` from AgeChecker.net must be provided.
+- Calls the AgeChecker.net API to verify the result.
+- Sets the customer’s custom field `custom_age_confirmed_` to `true` if the verification is successful (`status: accepted`).
+ 
+### Request Headers
+ 
+```
+sw-context-token: <your-sales-channel-context-token>
+Content-Type: application/json
+```
+ 
+> **Note**: The `sw-context-token` must be obtained via the Shopware Store API authentication process or created automatically in a Storefront session.
+ 
+### Example Request Body
+ 
+```json
+{
+  "uuid": "8e7c35e2-3f48-4fc9-9283-fb0e198b0fd5"
+}
+```
+ 
+### Successful Response
+ 
+```json
+{
+  "message": "Customer age verification status updated"
+}
+```
+ 
+### Example Error Response
+ 
+```json
+{
+  "message": "uuid is required"
+}
+```
+
+ 
+ ---
  
 ## Troubleshooting
  
