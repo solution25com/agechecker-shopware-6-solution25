@@ -1,3 +1,7 @@
+[![Packagist Version](https://img.shields.io/packagist/v/solution25/age-checker.svg)](https://packagist.org/packages/solution25/age-checker)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/solution25/age-checker.svg)](https://packagist.org/packages/solution25/age-checker)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/solution25com/agechecker-shopware-6-solution25/blob/main/LICENSE.md)
+
 # AgeChecker
  
 ## Introduction
