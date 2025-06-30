@@ -176,3 +176,7 @@ Content-Type: application/json
  
 - **What happens after 3 failed attempts?**  
   The user is redirected to a temporary denial page and cannot retry until the timeout expires.
+
+  ---
+
+  ## [Wiki](https://github.com/solution25com/agechecker-shopware-6-solution25/wiki)
