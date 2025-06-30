@@ -32,6 +32,12 @@ This tool is especially useful for businesses selling age-restricted products, p
 ```bash
 git clone https://github.com/solution25com/agechecker-shopware-6-solution25.git
 ```
+
+## Packagist
+ ```
+  composer require solution25/age-checker
+  ```
+  
  
 2. **Install the Plugin in Shopware 6**
 - Log in to your Shopware 6 Administration panel.
