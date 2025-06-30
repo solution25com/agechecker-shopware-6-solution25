@@ -1,5 +1,5 @@
 {
-    "name": "s25/age-checker",
+    "name": "solution25/age-checker",
     "description": "Age Checker - Shopware 6 Plugin",
     "type": "shopware-platform-plugin",
     "version": "1.0.0",
