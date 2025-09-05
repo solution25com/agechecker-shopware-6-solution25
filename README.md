@@ -22,6 +22,9 @@ This tool is especially useful for businesses selling age-restricted products, p
    - Block users temporarily after 3 failed attempts.
 5. **Admin Panel Configuration**
    - Easily manage settings from the Shopware admin panel.
+  
+## Compatibility
+- ✅ Shopware 6.6.x 
  
 ## Get Started
 ### Installation & Activation
